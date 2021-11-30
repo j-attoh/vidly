@@ -1,0 +1,27 @@
+version: "3.9" 
+
+services:
+  app:
+    build: . 
+    image: movie-app
+    ports:
+      - 5000:5000
+    volumes:
+      - ./:/usr/src/app
+    environment:
+      - jwtPrivateKey
+      - PORT 
+      - DB_TEST=mongodb://mongo/vidly_test
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo 
+    ports:
+      - 27000:27017
+    volumes:
+      - mongo-data:/data/db
+      - mongo-config:/data/configdb
+
+volumes:
+  mongo-data: 
+  mongo-config:
