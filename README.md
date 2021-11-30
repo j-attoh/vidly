@@ -1,7 +1,7 @@
 # vidly
 Movie Rentals API 
 
-This a Movie Rentals API written using Javascript -- Node  
+This a Movie Rentals API written using Javascript -- Node  ( Special Thanks to CodeWithMosh)
 
 This code features tests written using Jest 
 
