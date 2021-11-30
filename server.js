@@ -2,6 +2,7 @@ require("express-async-errors");
 const express = require("express");
 const app = express();
 
+
 require("dotenv").config();
 // check if jwtPrivateKey is set 
 
